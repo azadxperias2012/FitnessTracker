@@ -11,6 +11,9 @@
 
     <context:component-scan base-package="com.neotechlabs.controller"/>
 
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
+          p:basename="message"/>
+
     <!-- Long hand way -->
     <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
         <!--<property name="prefix" value="/WEB-INF/jsp/"/>-->
