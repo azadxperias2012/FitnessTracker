@@ -12,17 +12,19 @@ public class MinutesController {
     public String addMinutes(@ModelAttribute("exercise")Exercise exercise) {
 
         System.out.println("Exercise: " + exercise.getMinutes());
-        return "redirect:addMoreMinutes.html";
-//        return "forward:addMoreMinutes.html";
 
-    }
-
-    @RequestMapping(value = "/addMoreMinutes")
-    public String addMoreMinutes(@ModelAttribute("exercise")Exercise exercise) {
-
-        System.out.println("Exercising: " + exercise.getMinutes());
         return "addMinutes";
+//        return "redirect:addMoreMinutes.html";      // New request routed to different mapping
+//        return "forward:addMoreMinutes.html";     // Same request routed to different mapping
 
     }
+
+//    @RequestMapping(value = "/addMoreMinutes")
+//    public String addMoreMinutes(@ModelAttribute("exercise")Exercise exercise) {
+//
+//        System.out.println("Exercising: " + exercise.getMinutes());
+//        return "addMinutes";
+//
+//    }
 
 }
