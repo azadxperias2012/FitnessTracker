@@ -18,6 +18,7 @@ public class MinutesController {
     public String addMinutes(@ModelAttribute("exercise")Exercise exercise) {
 
         System.out.println("Exercise: " + exercise.getMinutes());
+        System.out.println("Exercise activity: " + exercise.getActivity());
 
         return "addMinutes";
 //        return "redirect:addMoreMinutes.html";      // New request routed to different mapping
