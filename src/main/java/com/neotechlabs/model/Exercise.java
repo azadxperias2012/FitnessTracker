@@ -1,8 +1,15 @@
 package com.neotechlabs.model;
 
+import org.hibernate.validator.constraints.Range;
+
+import javax.validation.constraints.NotNull;
+
 public class Exercise {
 
+    @Range(min = 1, max = 120)
     private int minutes;
+
+    @NotNull
     private String activity;
 
     public int getMinutes() {
